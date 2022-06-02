@@ -24,6 +24,7 @@ public class TimeKeeper extends Actor
         {
             world.removeObject(this);
             world.createTimer();
+            world.createBlue();
         }
     }
     

@@ -8,13 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends World
 {
+    Label scoreLabel;
+    public int score = 0;
+    
     public GameWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
+
+        UserGood click = new UserGood();
+        addObject(click, 100, 200);
         
-        Blue tester = new Blue();
-        addObject(tester, 100, 300);
+        createBlue();
+
+        //Create a label
+        scoreLabel = new Label(100, 220);
+        addObject(scoreLabel, 100, 100);
         
         //Creates a TimeKeeper
         createTimer();
@@ -28,5 +37,18 @@ public class GameWorld extends World
         int y = 0;
         addObject(one, x, y);
 
+    }
+
+    //Creates Blue 
+    public void createBlue()
+    {
+        Blue blueSquare = new Blue();
+        addObject(blueSquare, 600, 200);
+    }
+    
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
     }
 }
