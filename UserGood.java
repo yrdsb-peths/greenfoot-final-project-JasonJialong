@@ -18,8 +18,9 @@ public class UserGood extends Actor
             if (isTouching(Blue.class))
             {
                 removeTouching(Blue.class);
+                GameWorld world = (GameWorld) getWorld();
+                world.increaseScoreGood();
             }
-            // Add your action code here.
         }
     }
 

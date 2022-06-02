@@ -21,9 +21,9 @@ public class GameWorld extends World
         
         createBlue();
 
-        //Create a label
-        scoreLabel = new Label(100, 220);
-        addObject(scoreLabel, 100, 100);
+        //Create a label for score
+        scoreLabel = new Label(0, 40);
+        addObject(scoreLabel, 100, 150);
         
         //Creates a TimeKeeper
         createTimer();
@@ -46,9 +46,10 @@ public class GameWorld extends World
         addObject(blueSquare, 600, 200);
     }
     
-    public void increaseScore()
+    //Increase score by 10
+    public void increaseScoreGood()
     {
-        score++;
+        score += 10;
         scoreLabel.setValue(score);
     }
 }
