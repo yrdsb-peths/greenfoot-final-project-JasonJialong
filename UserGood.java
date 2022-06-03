@@ -13,15 +13,17 @@ public class UserGood extends Actor
 
     public void act()
     {
+        GameWorld world = (GameWorld) getWorld();
+        
         if (Greenfoot.isKeyDown("a"))
         {
             if (isTouching(Blue.class))
             {
                 removeTouching(Blue.class);
-                GameWorld world = (GameWorld) getWorld();
                 world.increaseScoreGood();
             }
         }
+        
     }
 
     public UserGood()

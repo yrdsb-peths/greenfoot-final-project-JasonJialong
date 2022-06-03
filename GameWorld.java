@@ -12,7 +12,7 @@ public class GameWorld extends World
     public int score = 0;
     GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
     private SimpleTimer timerSong = new SimpleTimer(); 
-    private SimpleTimer timerSpawnBlue = new SimpleTimer();
+    private SimpleTimer timerSpawn = new SimpleTimer();
 
     public GameWorld()
     {    
@@ -24,31 +24,35 @@ public class GameWorld extends World
         UserGood click = new UserGood();
         addObject(click, 100, 200);
 
-        createBlue();
-
         //Create a label for score
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
 
-        timerSpawnBlue.mark();       
+        timerSpawn.mark();       
 
     }
     
-    public void act(){
-        if (timerSpawnBlue.millisElapsed() > 1000)
+    public void act()
+    {
+        if (timerSpawn.millisElapsed() > 500)
         {
-            timerSpawnBlue.mark();
+            timerSpawn.mark();
             createBlue();
         }
     }
-    
-    
 
     //Creates Blue 
     public void createBlue()
     {
         Blue blueSquare = new Blue();
         addObject(blueSquare, 600, 200);
+    }
+    
+    //CreatesGreen
+    public void createGreen()
+    {
+        Green greenSquare = new Green();
+        addObject(greenSquare, 600, 200);
     }
 
     //Increase score by 10
