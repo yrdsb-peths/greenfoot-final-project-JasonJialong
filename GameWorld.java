@@ -30,21 +30,19 @@ public class GameWorld extends World
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
 
-        //Creates a TimeKeeper
-        createTimer();
+        timerSpawnBlue.mark();       
 
     }
     
-    //Creates the in game timer
-    public void createTimer()
-    {
+    public void act(){
         if (timerSpawnBlue.millisElapsed() > 1000)
         {
             timerSpawnBlue.mark();
             createBlue();
         }
-
     }
+    
+    
 
     //Creates Blue 
     public void createBlue()
