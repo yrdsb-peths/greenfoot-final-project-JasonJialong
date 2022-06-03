@@ -11,6 +11,8 @@ public class GameWorld extends World
     Label scoreLabel;
     public int score = 0;
     GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
+    private SimpleTimer timerSong = new SimpleTimer(); 
+    private SimpleTimer timerSpawnBlue = new SimpleTimer();
 
     public GameWorld()
     {    
@@ -18,7 +20,7 @@ public class GameWorld extends World
         super(600, 400, 1, false); 
 
         song.play();
-        
+
         UserGood click = new UserGood();
         addObject(click, 100, 200);
 
@@ -30,15 +32,17 @@ public class GameWorld extends World
 
         //Creates a TimeKeeper
         createTimer();
-    }
 
+    }
+    
     //Creates the in game timer
     public void createTimer()
     {
-        TimeKeeper one = new TimeKeeper();
-        int x = 0;
-        int y = 0;
-        addObject(one, x, y);
+        if (timerSpawnBlue.millisElapsed() > 1000)
+        {
+            timerSpawnBlue.mark();
+            createBlue();
+        }
 
     }
 
