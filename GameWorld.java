@@ -23,7 +23,10 @@ public class GameWorld extends World
 
         UserGood click = new UserGood();
         addObject(click, 100, 200);
-
+        
+        UserPerfect tap = new UserPerfect();
+        addObject(tap, 100, 200);
+        
         //Create a label for score
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
@@ -34,7 +37,7 @@ public class GameWorld extends World
     
     public void act()
     {
-        if (timerSpawn.millisElapsed() > 500)
+        if (timerSpawn.millisElapsed() > 705.88)
         {
             timerSpawn.mark();
             createBlue();
@@ -46,6 +49,9 @@ public class GameWorld extends World
     {
         Blue blueSquare = new Blue();
         addObject(blueSquare, 600, 200);
+        
+        Perfect perfect = new Perfect();
+        addObject(perfect, 600, 200);
     }
     
     //CreatesGreen
@@ -59,6 +65,13 @@ public class GameWorld extends World
     public void increaseScoreGood()
     {
         score += 10;
+        scoreLabel.setValue(score);
+    }
+    
+    //Increase score by 30
+    public void increaseScorePerfect()
+    {
+        score += 30;
         scoreLabel.setValue(score);
     }
 }

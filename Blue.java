@@ -18,7 +18,7 @@ public class Blue extends Actor
     }
     public void act()
     {
-        int x = getX()-6;
+        int x = getX()-5;
         int y = getY();
         setLocation(x, y);
     }
