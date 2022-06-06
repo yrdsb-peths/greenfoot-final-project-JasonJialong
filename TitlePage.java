@@ -25,15 +25,11 @@ public class TitlePage extends World
         //Starts game if spacebar pressed
         if (Greenfoot.isKeyDown("space"))
         {
-            GameWorld gameWorld = new GameWorld();
-            Greenfoot.setWorld(gameWorld);
+            Instructions instructions = new Instructions();
+            Greenfoot.setWorld(instructions);
         }
     }
     
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
         Label label = new Label("Beat Box", 70);
