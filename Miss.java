@@ -22,7 +22,7 @@ public class Miss extends Actor
     {
         if (isTouching(Perfect.class))
         {
-            removeTouching(Blue.class);
+            removeTouching(Box.class);
             removeTouching(Perfect.class);
         }
     }

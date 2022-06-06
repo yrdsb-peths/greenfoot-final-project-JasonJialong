@@ -17,9 +17,9 @@ public class UserGood extends Actor
         
         if (Greenfoot.isKeyDown("a"))
         {
-            if (isTouching(Blue.class))
+            if (isTouching(Box.class))
             {
-                removeTouching(Blue.class);
+                removeTouching(Box.class);
                 world.increaseScoreGood();
             }
         }

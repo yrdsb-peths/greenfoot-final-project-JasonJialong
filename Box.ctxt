@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Box
+comment0.text=\r\n\ Spawns\ different\ coloured\ boxes\ to\ be\ interacted\ with\r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
+comment1.params=colour
+comment1.target=Box(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

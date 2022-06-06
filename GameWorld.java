@@ -40,27 +40,23 @@ public class GameWorld extends World
         if (timerSpawn.millisElapsed() > 705.88)
         {
             timerSpawn.mark();
-            createBlue();
+            createBox("blue");
         }
     }
 
-    //Creates Blue 
-    public void createBlue()
+    //Creates Box  
+    public void createBox(String colour)
     {
-        Blue blueSquare = new Blue();
-        addObject(blueSquare, 600, 200);
+        if (colour.equals("blue"))
+        {
+            Box blueSquare = new Box("blue");
+            addObject(blueSquare, 600, 200);
+        }
         
         Perfect perfect = new Perfect();
         addObject(perfect, 600, 200);
     }
     
-    //CreatesGreen
-    public void createGreen()
-    {
-        Green greenSquare = new Green();
-        addObject(greenSquare, 600, 200);
-    }
-
     //Increase score by 10
     public void increaseScoreGood()
     {

@@ -38,13 +38,9 @@ public class TitlePage extends World
     {
         Label label = new Label("Beat Box", 70);
         addObject(label,187,116);
-        label.setLocation(323,197);
-        label.setLocation(322,190);
-        label.setLocation(283,274);
-        label.setLocation(341,217);
-        label.setLocation(280,176);
-        label.setLocation(348,181);
-        label.setLocation(262,196);
-        label.setLocation(194,183);
+        label.setLocation(300,200);
+        Label label2 = new Label("{Press [Space] to Start}", 50);
+        addObject(label2,321,290);
+        label2.setLocation(315,310);
     }
 }
