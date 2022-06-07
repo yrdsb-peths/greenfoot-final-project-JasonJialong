@@ -22,6 +22,7 @@ public class Miss extends Actor
     {
         if (isTouching(Perfect.class) || isTouching(Box.class))
         {
+            GameWorld.streak = 0;
             removeTouching(Box.class);
             removeTouching(Perfect.class);
         }

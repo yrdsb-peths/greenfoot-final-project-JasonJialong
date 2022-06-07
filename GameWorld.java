@@ -10,11 +10,11 @@ public class GameWorld extends World
 {
     Label scoreLabel;
     Label streakLabel;
-    public int score = 0;
+    public static int score = 0;
     GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
     private SimpleTimer timerSong = new SimpleTimer(); 
     private SimpleTimer timerSpawn = new SimpleTimer();
-    public int streak = 0;
+    public static int streak = 0;
 
     public GameWorld()
     {    
