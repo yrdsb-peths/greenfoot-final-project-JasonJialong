@@ -9,10 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameWorld extends World
 {
     Label scoreLabel;
+    Label streakLabel;
     public int score = 0;
     GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
     private SimpleTimer timerSong = new SimpleTimer(); 
     private SimpleTimer timerSpawn = new SimpleTimer();
+    public int streak = 0;
 
     public GameWorld()
     {    
@@ -30,7 +32,14 @@ public class GameWorld extends World
         //Create a label for score
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
-
+        
+        //Create a label for streak
+        streakLabel = new Label(0, 40);
+        addObject(streakLabel, 200, 150);
+        
+        //Create a Miss object
+        createMiss();
+        
         timerSpawn.mark();       
 
     }
@@ -42,6 +51,8 @@ public class GameWorld extends World
             timerSpawn.mark();
             createBox("blue");
         }
+        
+        streakLabel.setValue(streak);
     }
 
     //Creates Box  
@@ -62,6 +73,7 @@ public class GameWorld extends World
     {
         score += 10;
         scoreLabel.setValue(score);
+        streak += 1;
     }
     
     //Increase score by 30
@@ -69,5 +81,19 @@ public class GameWorld extends World
     {
         score += 30;
         scoreLabel.setValue(score);
+        streak += 1;
+    }
+    
+    //Creats a Miss object
+    public void createMiss()
+    {
+        Miss miss = new Miss();
+        addObject(miss, 1, 200);
+    }
+    
+    //Loses streak if Missed
+    public void missed()
+    {
+        streak = 0;
     }
 }

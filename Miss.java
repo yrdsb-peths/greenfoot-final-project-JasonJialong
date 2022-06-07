@@ -20,7 +20,7 @@ public class Miss extends Actor
 
     public void act()
     {
-        if (isTouching(Perfect.class))
+        if (isTouching(Perfect.class) || isTouching(Box.class))
         {
             removeTouching(Box.class);
             removeTouching(Perfect.class);

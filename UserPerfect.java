@@ -31,4 +31,5 @@ public class UserPerfect extends Actor
     {
         setImage(dotted);
         dotted.scale(size, size);
-    }}
+    }
+}
