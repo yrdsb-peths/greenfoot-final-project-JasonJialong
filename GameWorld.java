@@ -26,8 +26,11 @@ public class GameWorld extends World
 
         song.play();
 
-        UserGood click = new UserGood();
+        User click = new User();
         addObject(click, 100, 200);
+        
+        Images dots = new Images("dotted");
+        addObject(dots, 100, 200);
 
         //Create a label for score
         scoreLabel = new Label(0, 40);
@@ -45,7 +48,7 @@ public class GameWorld extends World
         createMiss();
 
         boxSpawnInterval.mark();       
-
+        songLength.mark();
     }
 
     public void act()
@@ -53,10 +56,25 @@ public class GameWorld extends World
         if (boxSpawnInterval.millisElapsed() > 705.88)
         {
             boxSpawnInterval.mark();
-            createBox("blue");
+            int x = Greenfoot.getRandomNumber(2);
+            if (x == 1)
+            {
+                createBox("blue");
+            }
+            
+            if (x == 0)
+            {
+                createBox("green");
+            }
         }
 
         streakLabel.setValue(streak);
+        
+        if (songLength.millisElapsed() >= 285000)
+        {
+            GameEnd end= new GameEnd();
+            Greenfoot.setWorld(end);
+        }
     }
 
     //Creates Box  
@@ -67,21 +85,29 @@ public class GameWorld extends World
             Box blueSquare = new Box("blue");
             addObject(blueSquare, 600, 200);
         }
+        
+        if (colour.equals("green"))
+        {
+            Box blueSquare = new Box("green");
+            addObject(blueSquare, 600, 200);
+        }
     }
 
     //Increase score by 10
     public void increaseScoreGood()
     {
-        score += 10;
+        score += (10 + streak);
         scoreLabel.setValue(score);
         streak += 1;
+        ratingLabel.setValue("Good");
     }
 
     //Increase score by 30
     public void increaseScorePerfect()
     {
-        score += 30;
+        score += (30 + streak);
         scoreLabel.setValue(score);
+        streak += 1;
         ratingLabel.setValue("Perfect");
     }
 
@@ -90,7 +116,6 @@ public class GameWorld extends World
     {
         Miss miss = new Miss();
         addObject(miss, 1, 200);
-        ratingLabel.setValue("Good");
     }
 
     //Loses streak if Missed

@@ -6,10 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class UserGood extends Actor
+public class User extends Actor
 {
     GreenfootImage dotted = new GreenfootImage("images/dotted.png");
-    private int size = 70;
+    private int size = 10;
 
     public void act()
     {
@@ -28,7 +28,7 @@ public class UserGood extends Actor
         }
     }
 
-    public UserGood()
+    public User()
     {
         setImage(dotted);
         dotted.scale(size, size);

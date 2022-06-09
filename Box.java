@@ -19,6 +19,9 @@ public class Box extends Actor
     
     public Box(String colour)
     {
+        blue.scale(size, size);
+        green.scale(size, size);
+        
         if (colour.equals("blue"))
         {
             setImage(blue);
@@ -29,11 +32,11 @@ public class Box extends Actor
             setImage(green);
         }
         
-        blue.scale(size, size);
+        
     }
     public void act()
     {
-        move(-5);
+        move(-6);
         GameWorld world = (GameWorld) getWorld();
         if (getX() <= 110)
         {
