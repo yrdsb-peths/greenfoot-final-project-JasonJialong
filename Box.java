@@ -34,17 +34,16 @@ public class Box extends Actor
     public void act()
     {
         move(-5);
-        
-        if (getX() == 100)
+        GameWorld world = (GameWorld) getWorld();
+        if (getX() <= 110)
         {
             perfectZone = true;
         }
-        
+
         else
         {
             perfectZone = false;
         }
-        
-        perfectZone = false;
+
     }
 }

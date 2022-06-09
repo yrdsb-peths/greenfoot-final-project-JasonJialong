@@ -10,6 +10,7 @@ public class GameWorld extends World
 {
     Label scoreLabel;
     Label streakLabel;
+    Label ratingLabel;
     public static int score = 0;
     public static int streak = 0;
 
@@ -28,9 +29,6 @@ public class GameWorld extends World
         UserGood click = new UserGood();
         addObject(click, 100, 200);
 
-        UserPerfect tap = new UserPerfect();
-        addObject(tap, 100, 200);
-
         //Create a label for score
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
@@ -38,6 +36,10 @@ public class GameWorld extends World
         //Create a label for streak
         streakLabel = new Label(0, 40);
         addObject(streakLabel, 200, 150);
+        
+        //Create a label for how the player is doing
+        ratingLabel = new Label(" ", 40);
+        addObject(ratingLabel, 100, 300);
 
         //Create a Miss object
         createMiss();
@@ -65,9 +67,6 @@ public class GameWorld extends World
             Box blueSquare = new Box("blue");
             addObject(blueSquare, 600, 200);
         }
-
-        Perfect perfect = new Perfect();
-        addObject(perfect, 600, 200);
     }
 
     //Increase score by 10
@@ -83,6 +82,7 @@ public class GameWorld extends World
     {
         score += 30;
         scoreLabel.setValue(score);
+        ratingLabel.setValue("Perfect");
     }
 
     //Creats a Miss object
@@ -90,11 +90,13 @@ public class GameWorld extends World
     {
         Miss miss = new Miss();
         addObject(miss, 1, 200);
+        ratingLabel.setValue("Good");
     }
 
     //Loses streak if Missed
     public void missed()
     {
         streak = 0;
+        ratingLabel.setValue("Miss");
     }
 }

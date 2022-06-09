@@ -15,21 +15,16 @@ public class UserGood extends Actor
     {
         GameWorld world = (GameWorld) getWorld();
 
-        if (Greenfoot.isKeyDown("a") && Box.perfectZone == false)
-        {
-            if (isTouching(Box.class))
-            {
-                removeTouching(Box.class);
-                removeTouching(Perfect.class);
-                world.increaseScorePerfect();
-            }
-        }
-
-        else if (Greenfoot.isKeyDown("a"))
+        if (Greenfoot.isKeyDown("a") && Box.perfectZone == true && isTouching(Box.class))
         {
             removeTouching(Box.class);
-            removeTouching(Perfect.class);
             world.increaseScorePerfect();
+        }
+
+        else if (Greenfoot.isKeyDown("a") && isTouching(Box.class))
+        {
+            removeTouching(Box.class);
+            world.increaseScoreGood();
         }
     }
 

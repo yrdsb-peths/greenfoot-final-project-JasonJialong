@@ -20,11 +20,12 @@ public class Miss extends Actor
 
     public void act()
     {
-        if (isTouching(Perfect.class) || isTouching(Box.class))
+        GameWorld world = (GameWorld) getWorld();
+        
+        if (isTouching(Box.class))
         {
-            GameWorld.streak = 0;
+            world.missed();
             removeTouching(Box.class);
-            removeTouching(Perfect.class);
         }
     }
 }
