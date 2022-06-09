@@ -1,18 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Instructions here.
+ * This shows the insructions to the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Jason Chen
+ * @version June 2022
  */
 public class Instructions extends World
 {
-
-    /**
-     * Constructor for objects of class Instructions.
-     * 
-     */
     private SimpleTimer timerInput = new SimpleTimer(); 
     
     public Instructions()
@@ -25,7 +20,7 @@ public class Instructions extends World
     
     public void act()
     {
-        //Starts game if spacebar pressed
+        //Starts game if spacebar pressed, the timer avoids a double input
         if (timerInput.millisElapsed() > 100 && Greenfoot.isKeyDown("space"))
         {
             GameWorld gameWorld = new GameWorld();

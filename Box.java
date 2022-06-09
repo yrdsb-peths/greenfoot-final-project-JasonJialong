@@ -15,6 +15,7 @@ public class Box extends Actor
     GreenfootImage blue = new GreenfootImage("images/blueSquare.png");
     GreenfootImage green = new GreenfootImage("images/greenSquare.png");
     private int size = 50;
+    public static boolean perfectZone = false;
     
     public Box(String colour)
     {
@@ -33,5 +34,17 @@ public class Box extends Actor
     public void act()
     {
         move(-5);
+        
+        if (getX() == 100)
+        {
+            perfectZone = true;
+        }
+        
+        else
+        {
+            perfectZone = false;
+        }
+        
+        perfectZone = false;
     }
 }

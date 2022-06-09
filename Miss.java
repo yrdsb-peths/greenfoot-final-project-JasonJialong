@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Miss here.
+ * The Miss Class creates an object that can be used to detect if the player
+ * missed an input, making them lose their streak.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jason Chen 
+ * @version June 2022
  */
 public class Miss extends Actor
 {
-
     GreenfootImage miss = new GreenfootImage("images/missLine.png");
-    private int size = 50;
+    private static int size = 50;
 
     public Miss()
     {

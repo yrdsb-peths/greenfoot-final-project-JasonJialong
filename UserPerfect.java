@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class UserPerfect extends Actor
 {
     GreenfootImage dotted = new GreenfootImage("images/dotted.png");
-    private int size = 30;
+    private static int size = 30;
 
     public void act()
     {
@@ -24,7 +24,7 @@ public class UserPerfect extends Actor
                 world.increaseScorePerfect();
             }
         }
-        
+
     }
 
     public UserPerfect()

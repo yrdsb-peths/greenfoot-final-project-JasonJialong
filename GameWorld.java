@@ -11,10 +11,12 @@ public class GameWorld extends World
     Label scoreLabel;
     Label streakLabel;
     public static int score = 0;
-    GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
-    private SimpleTimer timerSong = new SimpleTimer(); 
-    private SimpleTimer timerSpawn = new SimpleTimer();
     public static int streak = 0;
+
+    GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
+    private SimpleTimer songLength = new SimpleTimer(); 
+    private SimpleTimer boxSpawnInterval = new SimpleTimer();
+    private SimpleTimer actionCooldown = new SimpleTimer();
 
     public GameWorld()
     {    
@@ -25,33 +27,33 @@ public class GameWorld extends World
 
         UserGood click = new UserGood();
         addObject(click, 100, 200);
-        
+
         UserPerfect tap = new UserPerfect();
         addObject(tap, 100, 200);
-        
+
         //Create a label for score
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
-        
+
         //Create a label for streak
         streakLabel = new Label(0, 40);
         addObject(streakLabel, 200, 150);
-        
+
         //Create a Miss object
         createMiss();
-        
-        timerSpawn.mark();       
+
+        boxSpawnInterval.mark();       
 
     }
-    
+
     public void act()
     {
-        if (timerSpawn.millisElapsed() > 705.88)
+        if (boxSpawnInterval.millisElapsed() > 705.88)
         {
-            timerSpawn.mark();
+            boxSpawnInterval.mark();
             createBox("blue");
         }
-        
+
         streakLabel.setValue(streak);
     }
 
@@ -63,11 +65,11 @@ public class GameWorld extends World
             Box blueSquare = new Box("blue");
             addObject(blueSquare, 600, 200);
         }
-        
+
         Perfect perfect = new Perfect();
         addObject(perfect, 600, 200);
     }
-    
+
     //Increase score by 10
     public void increaseScoreGood()
     {
@@ -75,22 +77,21 @@ public class GameWorld extends World
         scoreLabel.setValue(score);
         streak += 1;
     }
-    
+
     //Increase score by 30
     public void increaseScorePerfect()
     {
         score += 30;
         scoreLabel.setValue(score);
-        streak += 1;
     }
-    
+
     //Creats a Miss object
     public void createMiss()
     {
         Miss miss = new Miss();
         addObject(miss, 1, 200);
     }
-    
+
     //Loses streak if Missed
     public void missed()
     {
