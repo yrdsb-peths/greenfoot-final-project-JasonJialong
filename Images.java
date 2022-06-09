@@ -17,7 +17,7 @@ public class Images extends Actor
     {
         blue.scale(size, size);
         green.scale(size, size);
-        dotted.scale(size, size);
+        dotted.scale(50, 50);
         
         if (image.equals("blue"))
         {
