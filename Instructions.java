@@ -38,7 +38,7 @@ public class Instructions extends World
     public void act()
     {
         //Starts game if spacebar pressed, the timer avoids a double input
-        if (timerInput.millisElapsed() > 100 && Greenfoot.isKeyDown("space"))
+        if (timerInput.millisElapsed() > 250 && Greenfoot.isKeyDown("space"))
         {
             GameWorld gameWorld = new GameWorld();
             Greenfoot.setWorld(gameWorld);
