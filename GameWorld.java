@@ -15,6 +15,7 @@ public class GameWorld extends World
     public static int streak = 0;
 
     GreenfootSound song = new GreenfootSound("Clock Tower (Remix).mp3");
+ 
     private SimpleTimer songLength = new SimpleTimer(); 
     private SimpleTimer boxSpawnInterval = new SimpleTimer();
     private SimpleTimer actionCooldown = new SimpleTimer();
@@ -28,9 +29,6 @@ public class GameWorld extends World
 
         User click = new User();
         addObject(click, 100, 200);
-        
-        Images dots = new Images("dotted");
-        addObject(dots, 100, 200);
 
         //Create a label for score
         scoreLabel = new Label(0, 40);
@@ -70,9 +68,16 @@ public class GameWorld extends World
 
         streakLabel.setValue(streak);
         
+        GameEnd end= new GameEnd();
+        
         if (songLength.millisElapsed() >= 285000)
         {
-            GameEnd end= new GameEnd();
+            Greenfoot.setWorld(end);
+        }
+        
+        if (Greenfoot.isKeyDown("escape"))
+        {
+            song.pause();
             Greenfoot.setWorld(end);
         }
     }
@@ -82,14 +87,14 @@ public class GameWorld extends World
     {
         if (colour.equals("blue"))
         {
-            Box blueSquare = new Box("blue");
+            BoxBlue blueSquare = new BoxBlue();
             addObject(blueSquare, 600, 200);
         }
         
         if (colour.equals("green"))
         {
-            Box blueSquare = new Box("green");
-            addObject(blueSquare, 600, 200);
+            BoxGreen greenSquare = new BoxGreen();
+            addObject(greenSquare, 600, 200);
         }
     }
 

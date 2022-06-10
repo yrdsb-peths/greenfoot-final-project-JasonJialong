@@ -9,21 +9,34 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class User extends Actor
 {
     GreenfootImage dotted = new GreenfootImage("images/dotted.png");
-    private int size = 10;
+    private int size = 60;
 
     public void act()
     {
         GameWorld world = (GameWorld) getWorld();
 
-        if (Greenfoot.isKeyDown("a") && isTouching(Box.class))
+        if (Greenfoot.isKeyDown("a") && isTouching(BoxBlue.class) && BoxBlue.perfectZone == true)
         {
-            removeTouching(Box.class);
+            removeTouching(BoxBlue.class);
+            world.increaseScorePerfect();
+        }
+        
+        else if (Greenfoot.isKeyDown("a") && isTouching(BoxBlue.class))
+        {
+            removeTouching(BoxBlue.class);
             world.increaseScoreGood();
         }
         
-        if (Greenfoot.isKeyDown("l") && isTouching(Box.class))
+        
+        if (Greenfoot.isKeyDown("l") && isTouching(BoxGreen.class) && BoxGreen.perfectZone == true)
         {
-            removeTouching(Box.class);
+            removeTouching(BoxGreen.class);
+            world.increaseScorePerfect();
+        }
+        
+        else if (Greenfoot.isKeyDown("l") && isTouching(BoxGreen.class))
+        {
+            removeTouching(BoxGreen.class);
             world.increaseScoreGood();
         }
     }

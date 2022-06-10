@@ -22,10 +22,11 @@ public class Miss extends Actor
     {
         GameWorld world = (GameWorld) getWorld();
         
-        if (isTouching(Box.class))
+        if (isTouching(BoxBlue.class) || isTouching(BoxGreen.class))
         {
             world.missed();
-            removeTouching(Box.class);
+            removeTouching(BoxBlue.class);
+            removeTouching(BoxGreen.class);
         }
     }
 }
