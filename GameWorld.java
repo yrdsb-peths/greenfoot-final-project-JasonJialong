@@ -75,6 +75,7 @@ public class GameWorld extends World
         if (songLength.millisElapsed() >= 285000 || Greenfoot.isKeyDown("escape"))
         {
             //Resets the game if the player wants to play again
+            end.finalScore = score;
             song.stop();
             score = 0;
             streak = 0;

@@ -31,7 +31,7 @@ public class Instructions extends World
         Images green = new Images("green");
         addObject(green, 100, 250);
 
-        Label label4 = new Label("Press [L]", 50);
+        Label label4 = new Label("Press D]", 50);
         addObject(label4,250 ,250);
     }
 

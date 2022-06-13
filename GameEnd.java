@@ -1,14 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GameEnd here.
+ * The world at the end of the game 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jason Chen
+ * @version June 2022
  */
 public class GameEnd extends World
 {
-    
+    public static int finalScore = 0;
+
     public GameEnd()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

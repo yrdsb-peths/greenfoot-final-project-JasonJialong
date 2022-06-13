@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GameEnd
-comment0.text=\n\ Write\ a\ description\ of\ class\ GameEnd\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ The\ world\ at\ the\ end\ of\ the\ game\ \r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=GameEnd()
 comment2.params=

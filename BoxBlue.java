@@ -12,7 +12,7 @@ public class BoxBlue extends Actor
      * Act - do whatever the Box wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage blue = new GreenfootImage("images/blueSquare.png");
+    GreenfootImage blue = new GreenfootImage("images/blueSquares.jpg");
     private int size = 50;
     public static boolean perfectZone = false;
 
@@ -26,7 +26,7 @@ public class BoxBlue extends Actor
     {
         move(-6);
         GameWorld world = (GameWorld) getWorld();
-        if (getX() <= 100)
+        if (getX() <= 115 && getX() >= 85)
         {
             perfectZone = true;
         }

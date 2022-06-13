@@ -28,13 +28,13 @@ public class User extends Actor
         }
         
         
-        if (Greenfoot.isKeyDown("l") && isTouching(BoxGreen.class) && BoxGreen.perfectZone == true)
+        if (Greenfoot.isKeyDown("d") && isTouching(BoxGreen.class) && BoxGreen.perfectZone == true)
         {
             removeTouching(BoxGreen.class);
             world.increaseScorePerfect();
         }
         
-        else if (Greenfoot.isKeyDown("l") && isTouching(BoxGreen.class))
+        else if (Greenfoot.isKeyDown("d") && isTouching(BoxGreen.class))
         {
             removeTouching(BoxGreen.class);
             world.increaseScoreGood();

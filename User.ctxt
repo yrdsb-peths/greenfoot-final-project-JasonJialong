@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=User
-comment0.text=\n\ User\ is\ the\ way\ the\ player\ interacts\ with\ the\ game,\ eliminating\ Boxes\n\ \n\ @author\ Jason\ Chen\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ User\ is\ the\ way\ the\ player\ interacts\ with\ the\ game,\ eliminating\ Boxes\r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

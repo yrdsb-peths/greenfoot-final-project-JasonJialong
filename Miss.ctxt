@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Miss
-comment0.text=\n\ The\ Miss\ Class\ creates\ an\ object\ that\ can\ be\ used\ to\ detect\ if\ the\ player\n\ missed\ an\ input,\ making\ them\ lose\ their\ streak.\n\ \n\ @author\ Jason\ Chen\ \n\ @version\ June\ 2022\n
+comment0.text=\r\n\ The\ Miss\ Class\ creates\ an\ object\ that\ can\ be\ used\ to\ detect\ if\ the\ player\r\n\ missed\ an\ input,\ making\ them\ lose\ their\ streak.\r\n\ \r\n\ @author\ Jason\ Chen\ \r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Miss()
 comment2.params=
