@@ -26,7 +26,7 @@ public class BoxGreen extends Actor
     {
         move(-6);
         GameWorld world = (GameWorld) getWorld();
-        if (getX() <= 101 || getX() >= 99)
+        if (getX() <= 105 && getX() >= 90)
         {
             perfectZone = true;
         }
