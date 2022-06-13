@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends World
 {
+    
     Label scoreLabel;
     Label streakLabel;
     Label ratingLabel;
@@ -66,20 +67,22 @@ public class GameWorld extends World
             }
         }
 
+        //Sets the streak value
         streakLabel.setValue(streak);
         
+        //Ends the game when the song is over or if the player clicks [esc]
         GameEnd end= new GameEnd();
-        
-        if (songLength.millisElapsed() >= 285000)
+        if (songLength.millisElapsed() >= 285000 || Greenfoot.isKeyDown("escape"))
         {
+            //Resets the game if the player wants to play again
+            song.stop();
+            score = 0;
+            streak = 0;
+            
+            //goes to the GameEnd world
             Greenfoot.setWorld(end);
         }
-        
-        if (Greenfoot.isKeyDown("escape"))
-        {
-            song.pause();
-            Greenfoot.setWorld(end);
-        }
+
     }
 
     //Creates Box  

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class UserGood here.
+ * User is the way the player interacts with the game, eliminating Boxes
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jason Chen
+ * @version June 2022
  */
 public class User extends Actor
 {

@@ -25,13 +25,13 @@ public class Instructions extends World
         Images blue = new Images("blue");
         addObject(blue, 100, 150);
         
-        Label label3 = new Label("Press [a]", 50);
+        Label label3 = new Label("Press [A]", 50);
         addObject(label3,250 ,150);
         
         Images green = new Images("green");
         addObject(green, 100, 250);
 
-        Label label4 = new Label("Press [l]", 50);
+        Label label4 = new Label("Press [L]", 50);
         addObject(label4,250 ,250);
     }
 

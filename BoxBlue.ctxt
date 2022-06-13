@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BoxBlue
-comment0.text=\r\n\ Spawns\ different\ coloured\ boxes\ to\ be\ interacted\ with\r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Spawns\ blue\ boxes\ to\ be\ interacted\ with\r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=BoxBlue()
 comment2.params=

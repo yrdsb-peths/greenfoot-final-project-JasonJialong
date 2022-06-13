@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Spawns different coloured boxes to be interacted with
+ * Spawns blue boxes to be interacted with
  * 
  * @author Jason Chen
  * @version June 2022

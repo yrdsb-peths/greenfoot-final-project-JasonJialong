@@ -8,19 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameEnd extends World
 {
-
     
     public GameEnd()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        Label label = new Label("This page not implemented yet :p", 40);
+        Label label = new Label("Game End", 40);
         addObject(label,300,50);
     }
     
     public void act()
-    {
-        //Starts game if spacebar pressed
+    {   
+        //Goes back to the intstructions
         if (Greenfoot.isKeyDown("space"))
         {
             Instructions instructions = new Instructions();
