@@ -1,18 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TitlePage here.
+ * Title page that looks nice
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jason Chen
+ * @version June 2022
  */
 public class TitlePage extends World
 {
-
-    /**
-     * Constructor for objects of class TitlePage.
-     * 
-     */
     public TitlePage()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -22,11 +17,11 @@ public class TitlePage extends World
     
     public void act()
     {
-        //Starts game if spacebar pressed
+        //Moves to the instructions when [space] is pressed
         if (Greenfoot.isKeyDown("space"))
         {
-            Instructions instructions = new Instructions();
-            Greenfoot.setWorld(instructions);
+            Controls controls = new Controls();
+            Greenfoot.setWorld(controls);
         }
     }
     

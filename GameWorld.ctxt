@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GameWorld
-comment0.text=\r\n\ The\ Main\ World\r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ The\ Main\ World\ where\ the\ player\ plays\ the\ game\ \r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=GameWorld()
 comment2.params=
@@ -8,11 +8,14 @@ comment2.target=void\ act()
 comment3.params=colour
 comment3.target=void\ createBox(java.lang.String)
 comment4.params=
-comment4.target=void\ increaseScoreGood()
+comment4.target=void\ createMiss()
 comment5.params=
-comment5.target=void\ increaseScorePerfect()
+comment5.target=void\ missed()
+comment5.text=\r\n\ The\ missed\ method\ resets\ the\ \r\n\ streak\ to\ 0\ \ and\ changes\ the\ \r\n\ ratingLable\ to\ "miss"\r\n
 comment6.params=
-comment6.target=void\ createMiss()
+comment6.target=void\ increaseScoreGood()
+comment6.text=\r\n\ The\ increaseScoreGood\ method\ \r\n\ increases\ score\ by\ 10\ and\ \r\n\ increases\ streak\ by\ 1\r\n
 comment7.params=
-comment7.target=void\ missed()
+comment7.target=void\ increaseScorePerfect()
+comment7.text=\r\n\ The\ increaseScorePerfect\r\n\ method\ increases\ score\ by\r\n\ 30\ and\ increases\ streak\r\n\ by\ 1\r\n
 numComments=8

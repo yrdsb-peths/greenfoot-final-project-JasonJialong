@@ -25,6 +25,8 @@ public class BoxGreen extends Actor
     public void act()
     {
         move(-6);
+        
+        //Gets the location of itself in the GameWorld, and if it is in between certain values the user gets "perfect" when hitting it
         GameWorld world = (GameWorld) getWorld();
         if (getX() <= 115 && getX() >= 85)
         {

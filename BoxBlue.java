@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BoxBlue extends Actor
 {
-    /**
-     * Act - do whatever the Box wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage blue = new GreenfootImage("images/blueSquares.jpg");
     private int size = 50;
     public static boolean perfectZone = false;
@@ -25,6 +21,8 @@ public class BoxBlue extends Actor
     public void act()
     {
         move(-6);
+        
+        //Gets the location of itself in the GameWorld, and if it is in between certain values the user gets "perfect" when hitting it
         GameWorld world = (GameWorld) getWorld();
         if (getX() <= 115 && getX() >= 85)
         {

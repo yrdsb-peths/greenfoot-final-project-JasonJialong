@@ -35,9 +35,4 @@ public class Images extends Actor
         }
         
     }
-
-    public void act()
-    {
-        
-    }
 }

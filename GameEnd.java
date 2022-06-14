@@ -8,27 +8,68 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameEnd extends World
 {
+    private static String rating = "F";
+    
     public GameEnd(int finalScore)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         Label end = new Label("Game End", 70);
         addObject(end,300,50);
-        
+
         Label finalScoreLable1 = new Label("Final Score:", 50);
-        addObject(finalScoreLable1,150,200);
-        
+        addObject(finalScoreLable1,150,150);
+
         Label finalScoreLable2 = new Label(finalScore, 50);
-        addObject(finalScoreLable2,290,200);
+        addObject(finalScoreLable2,400,150);
+        
+        //The rating the player gets
+        if (finalScore >= 93000)
+        {
+            rating.equals("SSS");
+        }
+        else if (finalScore >= 85000)
+        {
+            rating.equals("S");
+        }
+        else if (finalScore >= 50000)
+        {
+            rating.equals("A");
+        }
+        else if (finalScore >= 30000)
+        {
+            rating.equals("B");
+        }
+        else if (finalScore >= 17000)
+        {
+            rating.equals("C");
+        }
+        else if (finalScore >= 8000)
+        {
+            rating.equals("D");
+        }
+        else if (finalScore < 8000)
+        {
+            rating.equals("F");
+        }
+        
+        Label rating1 = new Label("Rating:", 50);
+        addObject(rating1,150,250);
+        
+        Label rating2 = new Label(rating, 50);
+        addObject(rating2,400,250);
+        
+        Label again = new Label("{Press [Space] to Play Again}", 50);
+        addObject(again,300,350);
     }
-    
+
     public void act()
     {   
         //Goes back to the intstructions
         if (Greenfoot.isKeyDown("space"))
         {
-            Instructions instructions = new Instructions();
-            Greenfoot.setWorld(instructions);
+            Controls controls = new Controls();
+            Greenfoot.setWorld(controls);
         }
     }
 }
