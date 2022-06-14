@@ -71,11 +71,10 @@ public class GameWorld extends World
         streakLabel.setValue(streak);
         
         //Ends the game when the song is over or if the player clicks [esc]
-        GameEnd end= new GameEnd();
+        GameEnd end = new GameEnd(score);
         if (songLength.millisElapsed() >= 285000 || Greenfoot.isKeyDown("escape"))
         {
             //Resets the game if the player wants to play again
-            end.finalScore = score;
             song.stop();
             score = 0;
             streak = 0;
