@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameEnd extends World
 {
+    Label ratingLabel; 
     private static String rating = "F";
     
     public GameEnd(int finalScore)
@@ -56,8 +57,8 @@ public class GameEnd extends World
         Label rating1 = new Label("Rating:", 50);
         addObject(rating1,150,250);
         
-        Label rating2 = new Label(rating, 50);
-        addObject(rating2,400,250);
+        ratingLabel = new Label(" ", 40);
+        addObject(ratingLabel, 400,250);
         
         Label again = new Label("{Press [Space] to Play Again}", 50);
         addObject(again,300,350);
@@ -71,5 +72,8 @@ public class GameEnd extends World
             Controls controls = new Controls();
             Greenfoot.setWorld(controls);
         }
+        
+        //Sets the streak value
+        ratingLabel.setValue(rating);
     }
 }

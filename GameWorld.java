@@ -38,13 +38,22 @@ public class GameWorld extends World
         scoreLabel = new Label(0, 40);
         addObject(scoreLabel, 100, 150);
 
+        Label scoreLabel2 = new Label("Score:", 30);
+        addObject(scoreLabel2,100,120);
+
         //Creates labels for the player's streak
         streakLabel = new Label(0, 40);
         addObject(streakLabel, 200, 150);
+        
+        Label streakLabel2 = new Label("Streak:", 30);
+        addObject(streakLabel2,200,120);
 
         //Creates labels for how the player is doing
         ratingLabel = new Label(" ", 40);
         addObject(ratingLabel, 100, 300);
+        
+        Label endLabel = new Label("Press [esc] to end the game", 20);
+        addObject(endLabel,485,380);
 
         //Create a Miss object
         createMiss();

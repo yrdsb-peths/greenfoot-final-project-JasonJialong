@@ -19,25 +19,28 @@ public class Controls extends World
 
         // Creates many lables to show the user the controls
         Label label = new Label("Instructions", 70);
-        addObject(label,300,50);
+        addObject(label,300,40);
 
         Label label2 = new Label("{Press [Space] to Continue}", 50);
-        addObject(label2,300,350);
+        addObject(label2,300,360);
 
         Label label3 = new Label("Press [A]", 50);
-        addObject(label3,250 ,150);
+        addObject(label3,250 ,180);
 
-        Label label4 = new Label("Press D]", 50);
-        addObject(label4,250 ,250);
+        Label label4 = new Label("Press [D]", 50);
+        addObject(label4,250 ,280);
 
-        Images blue = new Images("blue");
-        addObject(blue, 100, 150);
-
+        Label label5 = new Label("Break boxes, build a streak, and get a new high score!", 28);
+        addObject(label5,300,100);
+        
         //Images to go along the instructions
-        Images green = new Images("green");
-        addObject(green, 100, 250);
+        Images blue = new Images("blue");
+        addObject(blue, 100, 180);
 
+        Images green = new Images("green");
+        addObject(green, 100, 280);
     }
+
     public void act()
     {
         //Starts game if spacebar pressed, the timer avoids a double input

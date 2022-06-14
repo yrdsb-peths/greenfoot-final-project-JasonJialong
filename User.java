@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class User extends Actor
 {
-    GreenfootImage dotted = new GreenfootImage("images/dotted.png");
+    GreenfootImage dotted = new GreenfootImage("images/user.png");
     private int size = 60;
 
     public void act()

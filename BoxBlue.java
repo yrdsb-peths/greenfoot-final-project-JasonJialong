@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BoxBlue extends Actor
 {
-    GreenfootImage blue = new GreenfootImage("images/blueSquares.jpg");
+    GreenfootImage blue = new GreenfootImage("images/blueSquare.png");
     private int size = 50;
     public static boolean perfectZone = false;
 

@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Images extends Actor
 {
-    GreenfootImage blue = new GreenfootImage("images/blueSquares.jpg");
+    GreenfootImage blue = new GreenfootImage("images/blueSquare.png");
     GreenfootImage green = new GreenfootImage("images/greenSquare.png");
-    GreenfootImage dotted = new GreenfootImage("images/dotted.png");
+    GreenfootImage dotted = new GreenfootImage("images/user.png");
     private static int size = 80;
     
     public Images(String image)
@@ -29,7 +29,7 @@ public class Images extends Actor
             setImage(green);
         }
         
-        if (image.equals("dotted"))
+        if (image.equals("user"))
         {
             setImage(dotted);
         }
