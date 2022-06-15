@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The world at the end of the game 
+ * The world at the end of the game, shows score and rating
  * 
  * @author Jason Chen
  * @version June 2022
@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameEnd extends World
 {
     Label ratingLabel; 
-    private static String rating = "F";
     
+    //Takes in the final score from the GameWorld and prints it out
     public GameEnd(int finalScore)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -25,6 +25,8 @@ public class GameEnd extends World
         addObject(finalScoreLable2,400,150);
         
         //The rating the player gets
+        String rating = "F";
+        
         if (finalScore >= 93000)
         {
             rating.equals("SSS");
@@ -57,7 +59,7 @@ public class GameEnd extends World
         Label rating1 = new Label("Rating:", 50);
         addObject(rating1,150,250);
         
-        ratingLabel = new Label(" ", 40);
+        ratingLabel = new Label(rating, 40);
         addObject(ratingLabel, 400,250);
         
         Label again = new Label("{Press [Space] to Play Again}", 50);
@@ -72,8 +74,5 @@ public class GameEnd extends World
             Controls controls = new Controls();
             Greenfoot.setWorld(controls);
         }
-        
-        //Sets the streak value
-        ratingLabel.setValue(rating);
     }
 }

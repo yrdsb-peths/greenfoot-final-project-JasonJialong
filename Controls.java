@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This shows the insructions to the game
+ * This shows the insructions of the game to the user
  * 
  * @author Jason Chen
  * @version June 2022

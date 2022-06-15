@@ -100,7 +100,7 @@ public class GameWorld extends World
     }
 
     //Creates Box  
-    public void createBox(String colour)
+    private void createBox(String colour)
     {
         if (colour.equals("blue"))
         {
@@ -116,7 +116,7 @@ public class GameWorld extends World
     }
 
     //Creats a Miss object
-    public void createMiss()
+    private void createMiss()
     {
         Miss miss = new Miss();
         addObject(miss, 1, 200);
@@ -140,7 +140,7 @@ public class GameWorld extends World
      */
     public void increaseScoreGood()
     {
-        score += (10 + streak);
+        score += (1000 + streak);
         scoreLabel.setValue(score);
         streak += 1;
         ratingLabel.setValue("Good");

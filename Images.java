@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * This is a place to store all my images, used a lot for the Instructions world
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jason Chen 
+ * @version June 2022
  */
 public class Images extends Actor
 {

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GameEnd
-comment0.text=\r\n\ The\ world\ at\ the\ end\ of\ the\ game\ \r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ The\ world\ at\ the\ end\ of\ the\ game,\ shows\ score\ and\ rating\r\n\ \r\n\ @author\ Jason\ Chen\r\n\ @version\ June\ 2022\r\n
 comment1.params=finalScore
 comment1.target=GameEnd(int)
 comment2.params=
