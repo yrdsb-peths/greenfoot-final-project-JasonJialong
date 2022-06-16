@@ -140,7 +140,7 @@ public class GameWorld extends World
      */
     public void increaseScoreGood()
     {
-        score += (1000 + streak);
+        score += (10 + streak);
         scoreLabel.setValue(score);
         streak += 1;
         ratingLabel.setValue("Good");

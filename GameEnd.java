@@ -29,37 +29,37 @@ public class GameEnd extends World
         
         if (finalScore >= 93000)
         {
-            rating.equals("SSS");
+            rating = "SSS";
         }
         else if (finalScore >= 85000)
         {
-            rating.equals("S");
+            rating = "S";
         }
         else if (finalScore >= 50000)
         {
-            rating.equals("A");
+            rating = "A";
         }
         else if (finalScore >= 30000)
         {
-            rating.equals("B");
+            rating = "B";
         }
         else if (finalScore >= 17000)
         {
-            rating.equals("C");
+            rating = "C";
         }
         else if (finalScore >= 8000)
         {
-            rating.equals("D");
+            rating = "D";
         }
         else if (finalScore < 8000)
         {
-            rating.equals("F");
+            rating = "F";
         }
         
         Label rating1 = new Label("Rating:", 50);
         addObject(rating1,150,250);
         
-        ratingLabel = new Label(rating, 40);
+        ratingLabel = new Label(rating, 70);
         addObject(ratingLabel, 400,250);
         
         Label again = new Label("{Press [Space] to Play Again}", 50);
